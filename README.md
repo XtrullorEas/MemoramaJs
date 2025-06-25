@@ -30,3 +30,16 @@ memorama/
 └── game.js               # Lógica principal del juego
 
 ## 🛠️ Tecnologías
+- ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=flat&logo=javascript)  
+- ![HTML5](https://img.shields.io/badge/HTML5-Canvas-orange?style=flat&logo=html5) 
+
+## ▶️ Cómo ejecutar
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/memorama.git
+
+2. Abre el archivo `index.html` en tu navegador web.
+
+
+## 📄 Licencia
+Este proyecto está bajo la licencia MIT. Ver archivo [License](License) para más detalles.
