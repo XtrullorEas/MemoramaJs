@@ -2,10 +2,9 @@
     Memorama - Juego de Memoria 🧠
 </h1>
 
-[![Author](https://img.shields.io/badge/author-EliasMorote-green)](https://github.com/tu-usuario)
-#### [Ver Demo](https://tu-usuario.github.io/memorama-juego/)
+[![Author](https://img.shields.io/badge/author-XtrullorEas-green)](https://github.com/XtrullorEas)
+#### [Ver Demo](https://xtrulloreas.github.io/MemoramaJs/)
 
-![Preview del Juego](preview.gif)
 
 Juego de memoria interactivo desarrollado con JavaScript puro. Refuerza la memoria a corto plazo mediante emparejamiento de cartas con tres niveles de dificultad.
 
@@ -28,6 +27,7 @@ memorama/
 ├── index.html            # Página principal
 ├── style.css             # Estilos CSS
 └── game.js               # Lógica principal del juego
+```
 
 ## 🛠️ Tecnologías
 - ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow?style=flat&logo=javascript)  
