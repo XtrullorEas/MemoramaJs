@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorama - juego de Memoria</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div id="main-menu" class="menu-screen">
+        <h1>Memorama</h1>
+        <div class="menu-options">
+            <h2>Selecciona un nivel de dificultad</h2>
+            <button class="menu-btn" data-level="easy">Fácil (4x4)</button>
+            <button class="menu-btn" data-level="medium">Medio (4x5)</button>
+            <button class="menu-btn" data-level="hard">Difícil (6x6)</button>
+        </div>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <h1>Memorama</h1>
+        <div class="stats">
+            <div>Movimientos: <span id="moves">0</span></div>
+            <div>Tiempo: <span id="time">0</span>s</div>
+        </div>
+        <div class="game-container" id="gameBoard"></div>
+        <button id="restart">Reiniciar Juego</button>
+        <button id="back-to-menu">Volver al Menú</button>
+    </div>
+
+    <div class="credits">
+        Desarrollado por: Elias Morote Loli © 2025
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f8ff;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Estilos para el menú principal */
+.menu-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), 
+                url('img/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.menu-screen::before {
+    content: '🐶 🐱 🐭 🐹 🐰 🦊 🐻 🐼 🦁 🐮 🐷 🐸 🐵 🐔 🐧 🐦 🐤 🦄';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.05;
+    font-size: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    transform: rotate(10deg);
+    line-height: 2;
+    animation: floatEmojis 60s linear infinite;
+}
+
+@keyframes floatEmojis {
+    0% {
+        transform: rotate(5deg) translateY(0);
+    }
+    50% {
+        transform: rotate(-5deg) translateY(-10px);
+    }
+    100% {
+        transform: rotate(5deg) translateY(0);
+    }
+}
+
+/* Para asegurar que los elementos del menú sean visibles */
+.menu-options {
+    background-color: #34495e;
+    padding: 30px;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+/* Estilo para el título del juego en el menú */
+.menu-screen h1 {
+    font-size: 3.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+/* Añadir un efecto de brillo al título */
+.menu-screen h1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    transform: translateX(-100%);
+    animation: titleShine 3s infinite;
+}
+
+@keyframes titleShine {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Mejorar apariencia de los botones */
+.menu-btn {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    margin-bottom: 15px;
+}
+
+.menu-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.menu-btn:active {
+    transform: translateY(-2px);
+}
+
+/* Estilos para el juego */
+#game-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #4682b4;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.card.flipped {
+    background-color: white;
+    color: #4682b4;
+    transform: rotateY(180deg);
+}
+
+.card.matched {
+    background-color: #2ecc71;
+    cursor: default;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 20px;
+    background-color: #34495e;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.stats div {
+    flex: 1;
+}
+
+#restart, #back-to-menu {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}
+
+#back-to-menu {
+    background-color: #3498db;
+}
+
+#restart:hover {
+    background-color: #c0392b;
+}
+
+#back-to-menu:hover {
+    background-color: #2980b9;
+}
+
+.difficulty {
+    margin-top: 20px;
+}
+
+.difficulty-btn {
+    padding: 8px 15px;
+    margin: 0 5px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.difficulty-btn:hover {
+    background-color: #2980b9;
+}
+
+.difficulty-btn.active {
+    background-color: #16a085;
+}
+
+/* Estilos para los créditos */
+.credits {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #7f8c8d;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+@media (max-width: 768px) {
+    .credits {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+}
